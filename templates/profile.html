@@ -1,39 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ملف المستخدم</title>
-
-    <!-- تحميل ملفات CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}"> <!-- ملف خاص بالملف الشخصي -->
-
-</head>
-<body>
-
-<div class="container">
-    
-    <h1>👋 <span class="username">{{ user["username"] }}</span> مرحبًا</h1>
-    <img class="profile-avatar" src="https://cdn.discordapp.com/avatars/{{ user['id'] }}/{{ user['avatar'] }}.png" alt="Avatar">
-    
-    <p class="user-info"><b>معرفك:</b> {{ user["id"] }}</p>
-    <p class="user-info"><b>XP:</b> {{ xp }}</p>
-    <p class="user-info"><b>المستوى:</b> {{ level }}</p>
-
-    <!-- 🔵 شريط تقدم XP -->
-    <div class="xp-container">
-        <div class="xp-bar" style="width: {{ (xp % 100) }}%;"></div>
-    </div>
-
-    <!-- ⚙️ خيارات المستخدم -->
-    <a href="/admin" class="admin-btn">⚙️ دخول لوحة التحكم</a>
-    <a href="/logout" class="logout-btn">🚪 تسجيل الخروج</a>
-</div>
-
-<!-- تحميل ملفات JavaScript -->
-<script src="{{ url_for('static', filename='profile.js') }}"></script> <!-- ملف JavaScript للصفحة -->
-<script src="{{ url_for('static', filename='profile.js') }}"></script>
-
-</body>
-</html>
