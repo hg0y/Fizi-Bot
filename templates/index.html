@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم FiziBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}"> <!-- في حال الحاجة -->
+</head>
+<body>
+
+<div class="container">
+    <h1>مرحبًا بك في لوحة تحكم <b>FiziBot</b></h1>
+    <a href="/login" class="login-btn">
+        <img src="{{ url_for('static', filename='discord-icon.png') }}" alt="Discord" class="icon">
+        تسجيل الدخول باستخدام Discord
+    </a>
+</div>
+
+<script src="{{ url_for('static', filename='admin.js') }}"></script> <!-- في حال الحاجة -->
+</body>
+</html>
