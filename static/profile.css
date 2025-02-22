@@ -1,0 +1,23 @@
+.update-xp-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background: #4CAF50; /* لون أخضر جذاب */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.update-xp-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.update-xp-btn:active {
+    transform: scale(0.95);
+}
